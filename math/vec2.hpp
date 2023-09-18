@@ -75,7 +75,7 @@ namespace prim
         {
             float cos = std::cos(angle);
             float sin = std::sin(angle);
-            return { vec.x * cos - vec.y * sin, vec.x * sin + vec.y * cos };
+            return {x * cos - y * sin, x * sin + y * cos };
         }
     };
 
