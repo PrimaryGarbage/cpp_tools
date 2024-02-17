@@ -1,5 +1,5 @@
-#ifndef __STRING_EXTENSIONS_HPP__
-#define __STRING_EXTENSIONS_HPP__
+#ifndef __STRING_TOOLS_HPP__
+#define __STRING_TOOLS_HPP__
 
 #include <string>
 #include <vector>
@@ -70,4 +70,4 @@ namespace prim
     }
 }
 
-#endif // __STRING_EXTENSIONS_HPP__
+#endif // __STRING_TOOLS_HPP__
