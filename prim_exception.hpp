@@ -1,6 +1,8 @@
 #ifndef PRIM_EXCEPTION_HPP
 #define PRIM_EXCEPTION_HPP
 
+#include <string>
+
 #define PRIM_EXCEPTION(what, type) prim::Exception(what, type, __FILE__, __LINE__)
 
 enum class ExceptionType { OperationalException, NotFound };
