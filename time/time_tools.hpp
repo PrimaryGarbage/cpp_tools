@@ -7,7 +7,7 @@
 
 namespace prim
 {
-    std::string currentDateTimeString(const char* format)
+    inline std::string currentDateTimeString(const char* format = "%d-%m-%Y %H:%M:%S")
     {
         std::time_t time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
         std::string timeStr(30, '\0');

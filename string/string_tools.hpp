@@ -6,7 +6,7 @@
 
 namespace prim
 {
-    std::vector<std::string> splitString(std::string str, std::string delimiter)
+    inline std::vector<std::string> splitString(std::string str, std::string delimiter)
     {
         std::vector<std::string> strings;
         size_t pos = 0, prevPos = 0;
@@ -20,7 +20,7 @@ namespace prim
         return strings;
     }
 
-    std::vector<std::string> splitString(const std::string& str, const char delimiter)
+    inline std::vector<std::string> splitString(const std::string& str, const char delimiter)
     {
         std::vector<std::string> strings;
         int pos = -1, prevPos = -1;
@@ -36,7 +36,7 @@ namespace prim
         return strings;
     }
 
-    bool startsWith(const std::string& source, const std::string& str)
+    inline bool startsWith(const std::string& source, const std::string& str)
     {
         if(source.length() < str.length()) return false;
 
@@ -47,7 +47,7 @@ namespace prim
         return true;
     }
 
-    std::string toLower(const std::string& str)
+    inline std::string toLower(const std::string& str)
     {
         std::string lowerStr;
         lowerStr.reserve(str.size());
@@ -55,7 +55,7 @@ namespace prim
         return lowerStr;
     }
     
-    bool contains(const std::string& str, const std::string& substr) 
+    inline bool contains(const std::string& str, const std::string& substr) 
     {
         size_t substrLength = substr.length();
         if(str.length() < substr.length()) return false;
