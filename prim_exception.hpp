@@ -15,13 +15,13 @@ namespace prim
     {
     private:
         std::string whatString;
-        ExceptionType type;
+        ExceptionType _type;
     public:
         Exception(): whatString("[PRIM EXCEPTION]") {}
-        Exception(std::string what, ExceptionType type, std::string file, int line): whatString(std::string("[PRIM EXCEPTION : ") + ExceptionType_str[(u_int32_t)type] + "] -> File: '" + file + "', Line: '" + std::to_string(line) + "', What: '" + what + "'.") {}
+        Exception(std::string what, ExceptionType type, std::string file, int line): whatString(std::string("[PRIM EXCEPTION : ") + ExceptionType_str[(u_int32_t)_type] + "] -> File: '" + file + "', Line: '" + std::to_string(line) + "', What: '" + what + "'.") {}
 
         std::string what() const { return whatString; }
-        ExceptionType type() const { return type; };
+        ExceptionType type() const { return _type; };
     };
 
 }
