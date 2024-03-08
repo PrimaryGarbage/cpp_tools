@@ -19,15 +19,17 @@ namespace prim
     class Exception
     {
     private:
+        ExceptionType exceptionType = ExceptionType::OperationalException;
         std::string whatString;
-        ExceptionType type = ExceptionType::OperationalException;
     public:
-        Exception(): whatString("[PRIM EXCEPTION]") {}
-        Exception(std::string what, std::string file, int line): whatString(std::string("[PRIM EXCEPTION : ") + ExceptionType_str[(u_int32_t)type] + "] -> File: '" + file + "', Line: '" + std::to_string(line) + "', What: '" + what + "'.") {}
-        Exception(std::string what, ExceptionType type, std::string file, int line): whatString(std::string("[PRIM EXCEPTION : ") + ExceptionType_str[(u_int32_t)type] + "] -> File: '" + file + "', Line: '" + std::to_string(line) + "', What: '" + what + "'."), type(type) {}
+        Exception(): whatString("[EXCEPTION]") {}
+        Exception(std::string what, std::string file, int line): whatString(std::string("[EXCEPTION] : ") 
+        + ExceptionType_str[(u_int32_t)exceptionType] + "] -> File: '" + file + "', Line: '" + std::to_string(line) + "', What: '" + what + "'.") {}
+        Exception(std::string what, ExceptionType type, std::string file, int line): exceptionType(type), whatString(std::string("[EXCEPTION] : ") 
+            + ExceptionType_str[(u_int32_t)exceptionType] + "] -> File: '" + file + "', Line: '" + std::to_string(line) + "', What: '" + what + "'."){}
 
         std::string what() const { return whatString; }
-        ExceptionType type() const { return type; };
+        ExceptionType type() const { return exceptionType; };
     };
 
 }
