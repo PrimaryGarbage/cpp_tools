@@ -9,7 +9,7 @@ using deleteFuncType = void(*)(T*);
 template<class T, class D = std::default_delete<T>>
 using Unp = std::unique_ptr<T, D>;
 template<class T>
-using Shp = std::shared_ptr<T,>;
+using Shp = std::shared_ptr<T>;
 template<class T>
 using Wkp = std::weak_ptr<T>;
 
@@ -22,5 +22,8 @@ using u8 = uint8_t;
 using u16 = uint16_t;
 using u32 = uint32_t;
 using u64 = uint64_t;
+
+using size = size_t;
+using unit = unsigned int;
 
 #endif // __TYPEDEFS_HPP__
